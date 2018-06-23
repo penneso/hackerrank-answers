@@ -1,0 +1,7 @@
+from collections import OrderedDict
+
+def merge_the_tools(string, k):
+    chunks=int(len(string)/k)
+    t=[string[chunk*k:chunk*k+k] for chunk in range(chunks)]
+    for u in t:
+       print ("".join(OrderedDict.fromkeys(u)))
