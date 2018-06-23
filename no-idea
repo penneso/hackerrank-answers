@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+m,n = map(int, input().split())
+inp_array = map(int, input().split())
+like = set(map( int, input().split()))
+dlike = set(map( int, input().split()))
+
+#happiness = 0
+
+#for i in array:
+#    if i in like:
+#        happiness += 1
+#    elif i in dlike:
+#        happiness -= 1
+
+#print( happiness)
+print (sum([(i in like) - (i in dlike) for i in inp_array]))
